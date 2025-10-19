@@ -19,39 +19,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive   # ok whether vendored or submodule
 
-      # Install latest Hugo (extended)
+      # Hugo (extended)
       - uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
 
-      # Node for PostCSS
+      # Ensure theme exists in CI
+      - name: Get hermit-v2 theme
+        run: |
+          rm -rf themes/hermit-v2
+          git clone https://github.com/1bl4z3r/hermit-V2.git themes/hermit-v2
+          ls -la themes/hermit-v2 | head -n 50
+
+      # PostCSS (some Hermit builds need it)
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      # Install PostCSS deps (root)
-      - run: npm ci || npm i
-
-      # If you didn't commit the theme, fetch it (KEEP commented if vendored)
-      # - run: |
-      #     rm -rf themes/hermit-v2
-      #     git clone https://github.com/1bl4z3r/hermit-V2.git themes/hermit-v2
+      - name: Install PostCSS deps (root if present)
+        run: |
+          if [ -f package.json ]; then npm ci || npm i; fi
+          if [ -f themes/hermit-v2/package.json ]; then (cd themes/hermit-v2 && npm ci || npm i); fi
 
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
-          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
         run: |
-          npx postcss --version
           hugo --minify
-          echo "-- CSS refs --"
+          echo "— stylesheet refs —"
           grep -n 'rel="stylesheet"' public/index.html || true
-          echo "-- Assets under /public --"
-          find public -maxdepth 2 -type f | head -n 80
 
       - uses: actions/upload-pages-artifact@v3
         with:
