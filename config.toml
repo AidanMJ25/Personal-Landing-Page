@@ -1,7 +1,7 @@
 baseURL = "https://aidanmaurinjones.com/"
 languageCode = "en-us"
 title = "Aidan Maurin-Jones"
-theme = "hermit-v2"
+theme = "hermit-V2"
 
 relativeURLs = true
 enableRobotsTXT = true
