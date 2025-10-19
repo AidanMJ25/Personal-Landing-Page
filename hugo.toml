@@ -3,6 +3,10 @@ languageCode = "en-us"
 title = "Aidan Maurin-Jones"
 theme = "hermit-v2"
 
+[params]
+  footerHideThemeName = true
+  noIndex = true
+
 [menu]
 
   [[menu.main]]
@@ -19,3 +23,8 @@ theme = "hermit-v2"
     name = "LinkedIn"
     url = "https://linkedin.com/in/aidanmaurinjones"
     weight = 30
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/Contact"
+    weight = 40
