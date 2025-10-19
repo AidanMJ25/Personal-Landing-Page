@@ -1,0 +1,5 @@
+baseURL = 'https://aidanmaurinjones.com'
+languageCode = 'en-us'
+title = 'Aidan Maurin-Jones'
+theme = 'hermit-v2'
+
