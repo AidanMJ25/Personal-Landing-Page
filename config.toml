@@ -3,13 +3,16 @@ languageCode = "en-us"
 title = "Aidan Maurin-Jones"
 theme = "hermit-v2"
 
-relativeURLs = true
+# URL behavior
+canonifyURLs = true
+# REMOVE: relativeURLs
+
 enableRobotsTXT = true
 
 [params]
   author = "Aidan Maurin-Jones"
   description = "Links to all my adventures on the web"
   homeSubtitle = "Veterinary Assistant • macOS Automation Enthusiast"
-  defaultTheme = "auto"  # auto-switches light/dark
+  defaultTheme = "auto"
   showReadingTime = false
   showDate = false
