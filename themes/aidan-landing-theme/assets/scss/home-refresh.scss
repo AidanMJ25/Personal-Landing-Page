@@ -205,6 +205,15 @@ body#page textarea {
   text-shadow: none;
 }
 
+.page-refresh__list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.page-refresh__list li + li {
+  margin-top: 0.55rem;
+}
+
 @media (max-width: 720px) {
   .home-refresh {
     min-height: 100svh;

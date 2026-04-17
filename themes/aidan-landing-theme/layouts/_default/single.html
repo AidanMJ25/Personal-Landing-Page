@@ -1,5 +1,3 @@
-{{ define "head" }}<meta name="theme-color" content="#f7f3ea">{{ end }}
-
 {{ define "main" }}
   <main class="home-refresh page-refresh">
     <div class="home-refresh__glow home-refresh__glow--one" aria-hidden="true"></div>
@@ -9,7 +7,7 @@
       <a class="home-refresh__action page-refresh__back" href="{{ .Site.BaseURL }}">Home</a>
       <h1 class="page-refresh__title">{{ .Title }}</h1>
       <div class="page-refresh__content content">
-        {{ .Content }}
+        {{ .Content | replaceRE "(<h[1-6] id=\"([^\"]+)\".+)(</h[1-6]+>)" `${1}<a href="#${2}" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a>${3}` | safeHTML }}
       </div>
     </section>
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="{{ if .Site.Params.noIndex }}noindex, nofollow{{ else }}index, follow{{ end }}">
+  <meta name="author" content="{{ .Site.Params.author.name }}">
+  <meta name="description" content="{{ .Page.Params.description | default .Site.Params.description }}">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;600&display=swap">
+  {{ $style := resources.Get "scss/home-refresh.scss" | resources.ExecuteAsTemplate "css/home-refresh.css" . | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous">
+  {{ block "head" . }}{{ end }}
+</head>
+<body id="page">
+  {{ block "main" . }}{{ end }}
+</body>
+</html>

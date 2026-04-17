@@ -1,7 +1,7 @@
 baseURL = "https://aidanmaurinjones.com"
 languageCode = "en-us"
 title = "Aidan Maurin-Jones"
-theme = ["aidan-landing-theme", "hermit-v2"]
+theme = "aidan-landing-theme"
 
 [params]
   accentColor = "#1f6a63"

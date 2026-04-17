@@ -9,7 +9,4 @@ For posts/articles pages, posts-footer.html
 <p>
 	&copy; {{ now.Format (default "2006" .Site.Params.dateform.CopyrightDate) }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 	{{ .Site.Params.footerCopyright | safeHTML }}
-	{{ if not .Site.Params.footerHideThemeName -}}
-	 Made with <a href="https://gohugo.io/" target="_blank" rel="noopener" title="The world's fastest framework for building websites">Hugo</a> &amp; <a href="https://github.com/1bl4z3r/hermit-V2" target="_blank" rel="noopener" title="A fast, minimalist Hugo theme">Hermit-V2</a>
-	{{- end }}
 </p>

@@ -1,11 +1,4 @@
-{{ define "head" }}
-  <meta name="theme-color" content="#f7f3ea">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;600&display=swap">
-  {{ $homeStyle := resources.Get "scss/home-refresh.scss" | resources.ExecuteAsTemplate "css/home-refresh.css" . | toCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $homeStyle.Permalink }}" {{ printf "integrity=%q" $homeStyle.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous">
-{{ end }}
+{{ define "head" }}<meta name="theme-color" content="#f7f3ea">{{ end }}
 
 {{ define "main" }}
   <main class="home-refresh">

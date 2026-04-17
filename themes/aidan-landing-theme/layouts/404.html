@@ -1,15 +1,13 @@
-{{ define "head" }}<meta name="theme-color" content="#f7f3ea">{{ end }}
-
 {{ define "main" }}
   <main class="home-refresh page-refresh">
     <div class="home-refresh__glow home-refresh__glow--one" aria-hidden="true"></div>
     <div class="home-refresh__glow home-refresh__glow--two" aria-hidden="true"></div>
 
     <section class="home-refresh__card page-refresh__card">
-      <a class="home-refresh__action page-refresh__back" href="{{ .Site.BaseURL }}">Home</a>
-      <h1 class="page-refresh__title">{{ .Title }}</h1>
+      <h1 class="page-refresh__title">Page Not Found</h1>
       <div class="page-refresh__content content">
-        {{ .Content }}
+        <p>The page you were looking for does not exist.</p>
+        <p><a class="home-refresh__action page-refresh__back" href="{{ .Site.BaseURL }}">Back Home</a></p>
       </div>
     </section>
 
