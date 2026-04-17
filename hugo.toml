@@ -4,8 +4,14 @@ title = "Aidan Maurin-Jones"
 theme = "hermit-v2"
 
 [params]
+  accentColor = "#1f6a63"
+  description = "A simple personal site with writing, links, and a way to get in touch."
   footerHideThemeName = true
+  homeIntro = "A simple place to find my writing, a few useful links, and the easiest way to reach me."
   noIndex = true
+
+  [params.author]
+    name = "Aidan Maurin-Jones"
 
 [menu]
 
@@ -15,13 +21,13 @@ theme = "hermit-v2"
     weight = 10
 
   [[menu.main]]
-    name = "Mastodon"
-    url = "https://mastodon.social/@aidanmaurinjones"
+    name = "LinkedIn"
+    url = "https://linkedin.com/in/aidanmaurinjones"
     weight = 20
 
   [[menu.main]]
-    name = "LinkedIn"
-    url = "https://linkedin.com/in/aidanmaurinjones"
+    name = "Mastodon"
+    url = "https://mastodon.social/@aidanmaurinjones"
     weight = 30
 
   [[menu.main]]

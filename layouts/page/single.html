@@ -1,0 +1,27 @@
+{{ define "head" }}
+  <meta name="theme-color" content="#f7f3ea">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;600&display=swap">
+  {{ $pageStyle := resources.Get "scss/home-refresh.scss" | resources.ExecuteAsTemplate "css/home-refresh.css" . | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $pageStyle.Permalink }}" {{ printf "integrity=%q" $pageStyle.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous">
+{{ end }}
+
+{{ define "main" }}
+  <main class="home-refresh page-refresh">
+    <div class="home-refresh__glow home-refresh__glow--one" aria-hidden="true"></div>
+    <div class="home-refresh__glow home-refresh__glow--two" aria-hidden="true"></div>
+
+    <section class="home-refresh__card page-refresh__card">
+      <a class="home-refresh__action page-refresh__back" href="{{ .Site.BaseURL }}">Home</a>
+      <h1 class="page-refresh__title">{{ .Title }}</h1>
+      <div class="page-refresh__content content">
+        {{ .Content | replaceRE "(<h[1-6] id=\"([^\"]+)\".+)(</h[1-6]+>)" `${1}<a href="#${2}" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a>${3}` | safeHTML }}
+      </div>
+    </section>
+
+    <footer class="home-refresh__footer">
+      <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+    </footer>
+  </main>
+{{ end }}

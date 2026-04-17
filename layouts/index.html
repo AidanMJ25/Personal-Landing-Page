@@ -1,0 +1,41 @@
+{{ define "head" }}
+  <meta name="theme-color" content="#f7f3ea">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;600&display=swap">
+  {{ $homeStyle := resources.Get "scss/home-refresh.scss" | resources.ExecuteAsTemplate "css/home-refresh.css" . | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $homeStyle.Permalink }}" {{ printf "integrity=%q" $homeStyle.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous">
+{{ end }}
+
+{{ define "main" }}
+  <main class="home-refresh">
+    <div class="home-refresh__glow home-refresh__glow--one" aria-hidden="true"></div>
+    <div class="home-refresh__glow home-refresh__glow--two" aria-hidden="true"></div>
+
+    <section class="home-refresh__card">
+      <h1 class="home-refresh__title">{{ .Site.Title }}</h1>
+
+      {{ with .Site.Params.homeIntro }}
+        <p class="home-refresh__intro">{{ . }}</p>
+      {{ end }}
+
+      <nav class="home-refresh__actions" aria-label="Primary">
+        {{ range .Site.Menus.main }}
+          {{ $isExternal := or (hasPrefix .URL "http://") (hasPrefix .URL "https://") }}
+          <a
+            class="home-refresh__action"
+            href="{{ .URL }}"
+            {{ if $isExternal }}target="_blank" rel="noopener"{{ end }}
+          >
+            {{ .Name }}
+          </a>
+        {{ end }}
+      </nav>
+
+    </section>
+
+    <footer class="home-refresh__footer">
+      <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+    </footer>
+  </main>
+{{ end }}
