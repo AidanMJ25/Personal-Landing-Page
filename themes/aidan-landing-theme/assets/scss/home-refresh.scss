@@ -17,6 +17,12 @@ body#page textarea {
   font-family: "Instrument Sans", "Avenir Next", "Segoe UI", sans-serif;
 }
 
+.home-refresh-body {
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+
 .home-refresh {
   position: relative;
   display: flex;
@@ -26,6 +32,14 @@ body#page textarea {
   justify-content: center;
   padding: 2rem;
   overflow: hidden;
+}
+
+.home-refresh--landing {
+  height: 100vh;
+  height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
+  box-sizing: border-box;
 }
 
 .home-refresh::before {
@@ -219,6 +233,11 @@ body#page textarea {
     min-height: 100svh;
     justify-content: flex-start;
     padding: 0.3rem 0.45rem 1.2rem;
+  }
+
+  .home-refresh--landing {
+    height: 100svh;
+    min-height: 100svh;
   }
 
   .home-refresh::before {

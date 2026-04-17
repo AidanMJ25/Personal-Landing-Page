@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="{{ $style.Permalink }}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous">
   {{ block "head" . }}{{ end }}
 </head>
-<body id="page">
+<body id="page" class="{{ block "body_class" . }}{{ end }}">
   {{ block "main" . }}{{ end }}
 </body>
 </html>
