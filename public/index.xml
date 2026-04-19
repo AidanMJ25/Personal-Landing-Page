@@ -1,18 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Aidan Maurin-Jones</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Aidan Maurin-Jones</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Contact</title>
-      <link>http://localhost:1313/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
-      <description>&lt;h3 id=&#34;got-something-to-say&#34;&gt;Got something to say?&lt;/h3&gt;&#xA;&lt;p&gt;If you want to reach out about a post, a project, or anything else, send a note below.&#xA;I read every message and reply when I can.&lt;/p&gt;&#xA;&lt;style&gt;&#xA;  .contact-form {&#xA;    max-width: 100%;&#xA;    margin: 1.75rem 0;&#xA;    display: grid;&#xA;    grid-template-columns: 1fr;&#xA;    gap: .85rem;&#xA;  }&#xA;&#xA;  .contact-form label {&#xA;    display: block;&#xA;    color: #16312e;&#xA;    font-weight: 600;&#xA;    margin-top: .25rem;&#xA;  }&#xA;&#xA;  .contact-form input,&#xA;  .contact-form textarea {&#xA;    width: 100%;&#xA;    box-sizing: border-box;&#xA;    padding: .8rem .95rem;&#xA;    border: 1px solid rgba(22, 49, 46, 0.14);&#xA;    border-radius: 14px;&#xA;    color: #16312e;&#xA;    background: rgba(255, 255, 255, 0.88);&#xA;    box-shadow: inset 0 1px 2px rgba(22, 49, 46, 0.04);&#xA;    font: inherit;&#xA;    transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;&#xA;  }&#xA;&#xA;  .contact-form input:focus,&#xA;  .contact-form textarea:focus {&#xA;    outline: none;&#xA;    border-color: #5bb2a2;&#xA;    background: #ffffff;&#xA;    box-shadow: 0 0 0 4px rgba(31, 106, 99, 0.18);&#xA;  }&#xA;&#xA;  .contact-form textarea {&#xA;    min-height: 220px;&#xA;    resize: vertical;&#xA;  }&#xA;&#xA;  .contact-form button {&#xA;    width: auto;&#xA;    align-self: start;&#xA;    padding: .8rem 1.2rem;&#xA;    border: 0;&#xA;    border-radius: 999px;&#xA;    cursor: pointer;&#xA;    color: #ffffff;&#xA;    background: #1f6a63;&#xA;    font-weight: 600;&#xA;    transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;&#xA;  }&#xA;&#xA;  .contact-form button:hover,&#xA;  .contact-form button:focus-visible {&#xA;    outline: none;&#xA;    background: #268076;&#xA;    box-shadow: 0 12px 28px rgba(31, 106, 99, 0.24);&#xA;    transform: translateY(-1px);&#xA;  }&#xA;&lt;/style&gt;&#xA;&#xA;&lt;form class=&#34;contact-form&#34; action=&#34;https://formspree.io/f/mrbybwzk&#34; method=&#34;POST&#34;&gt;&#xA;   &lt;label for=&#34;name&#34;&gt;Your Name&lt;/label&gt;&#xA;  &lt;input id=&#34;name&#34; name=&#34;name&#34; type=&#34;text&#34; autocomplete=&#34;name&#34; required&gt;&#xA;  &#xA;  &lt;label for=&#34;email&#34;&gt;Your Email&lt;/label&gt;&#xA;  &lt;input id=&#34;email&#34; name=&#34;email&#34; type=&#34;email&#34; autocomplete=&#34;email&#34; required&gt;&#xA;&#xA;  &lt;label for=&#34;message&#34;&gt;Your Message&lt;/label&gt;&#xA;  &lt;textarea id=&#34;message&#34; name=&#34;message&#34; required&gt;&lt;/textarea&gt;&#xA;&#xA;  &lt;input type=&#34;hidden&#34; name=&#34;_subject&#34; value=&#34;New message from your Landing Page contact form&#34;&gt;&#xA;  &lt;input type=&#34;text&#34; name=&#34;_gotcha&#34; style=&#34;display:none&#34;&gt; &#xA;  &lt;button type=&#34;submit&#34; class=&#34;button&#34;&gt;Send&lt;/button&gt;&#xA;&lt;/form&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Aidan Maurin-Jones</title><link>https://aidanmaurinjones.com/</link><description>Recent content on Aidan Maurin-Jones</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://aidanmaurinjones.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Contact</title><link>https://aidanmaurinjones.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://aidanmaurinjones.com/contact/</guid><description>&lt;h3 id="got-something-to-say"&gt;Got something to say?&lt;/h3&gt;
+&lt;p&gt;If you want to reach out about a post, a project, or anything else, send a note below.
+I read every message and reply when I can.&lt;/p&gt;
+&lt;style&gt;
+ .contact-form {
+ max-width: 100%;
+ margin: 1.75rem 0;
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: .85rem;
+ }
+
+ .contact-form label {
+ display: block;
+ color: #16312e;
+ font-weight: 600;
+ margin-top: .25rem;
+ }
+
+ .contact-form input,
+ .contact-form textarea {
+ width: 100%;
+ box-sizing: border-box;
+ padding: .8rem .95rem;
+ border: 1px solid rgba(22, 49, 46, 0.14);
+ border-radius: 14px;
+ color: #16312e;
+ background: rgba(255, 255, 255, 0.88);
+ box-shadow: inset 0 1px 2px rgba(22, 49, 46, 0.04);
+ font: inherit;
+ transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+ }
+
+ .contact-form input:focus,
+ .contact-form textarea:focus {
+ outline: none;
+ border-color: #5bb2a2;
+ background: #ffffff;
+ box-shadow: 0 0 0 4px rgba(31, 106, 99, 0.18);
+ }
+
+ .contact-form textarea {
+ min-height: 220px;
+ resize: vertical;
+ }
+
+ .contact-form button {
+ width: auto;
+ align-self: start;
+ padding: .8rem 1.2rem;
+ border: 0;
+ border-radius: 999px;
+ cursor: pointer;
+ color: #ffffff;
+ background: #1f6a63;
+ font-weight: 600;
+ transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+ }
+
+ .contact-form button:hover,
+ .contact-form button:focus-visible {
+ outline: none;
+ background: #268076;
+ box-shadow: 0 12px 28px rgba(31, 106, 99, 0.24);
+ transform: translateY(-1px);
+ }
+&lt;/style&gt;
+
+&lt;form class="contact-form" action="https://formspree.io/f/mrbybwzk" method="POST"&gt;
+ &lt;label for="name"&gt;Your Name&lt;/label&gt;
+ &lt;input id="name" name="name" type="text" autocomplete="name" required&gt;
+ 
+ &lt;label for="email"&gt;Your Email&lt;/label&gt;
+ &lt;input id="email" name="email" type="email" autocomplete="email" required&gt;
+
+ &lt;label for="message"&gt;Your Message&lt;/label&gt;
+ &lt;textarea id="message" name="message" required&gt;&lt;/textarea&gt;
+
+ &lt;input type="hidden" name="_subject" value="New message from your Landing Page contact form"&gt;
+ &lt;input type="text" name="_gotcha" style="display:none"&gt; 
+ &lt;button type="submit" class="button"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</description></item></channel></rss>

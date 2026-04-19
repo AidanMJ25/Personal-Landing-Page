@@ -8,7 +8,7 @@ theme = "aidan-landing-theme"
   description = "A simple personal site with writing, links, and a way to get in touch."
   footerHideThemeName = true
   homeIntro = "A simple place to find my writing, a few useful links, and the easiest way to reach me."
-  noIndex = true
+  noIndex = false
 
   [params.author]
     name = "Aidan Maurin-Jones"
